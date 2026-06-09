@@ -29,4 +29,4 @@ The application displays an interactive map of India. When users hover over a st
 1. Clone the repository:
 
    ```bash
-   https://github.com/AppikatlaPushpaHasini/freedom-stuggle-project.git
+   https://appikatlapushpahasini.github.io/freedom-stuggle-project/
