@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+    <!-- From CDN (recommended for testing) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .hide {
+            background-color: rgb(225, 232, 239);
+            border-radius: 10px;
+            text-align: center;
+            position: absolute;
+            margin: 0 auto;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .andhrapradesh-txt {
+            top: 60%;
+            left: 50%;
+        }
+        
+        .telangana-txt {
+            top: 47%;
+            left: 37%;
+        }
+        
+        .kerala-txt {
+            top: 67%;
+            left: 32%;
+        }
+        
+        .arunachalpradesh-txt {
+            top: 25%;
+            left: 51%;
+        }
+        
+        .assam-txt {
+            top: 27%;
+            left: 51%;
+        }
+        
+        .bihar-txt {
+            top: 23%;
+            left: 50%;
+        }
+        
+        .chattigarh-txt {
+            top: 47%;
+            left: 51%;
+        }
+        
+        .goa-txt {
+            top: 47%;
+            left: 50%;
+        }
+        
+        .gujarat-txt {
+            top: 33%;
+            left: 30%;
+        }
+        
+        .haryana-txt {
+            top: 27%;
+            left: 45%;
+        }
+        
+        .himachalpradesh-txt {
+            top: 17%;
+            left: 47%;
+        }
+        
+        .jammukashmir-txt {
+            top: 7%;
+            left: 35%;
+        }
+        
+        .jharkhand-txt {
+            top: 47%;
+            left: 53%;
+        }
+        
+        .karnataka-txt {
+            top: 60%;
+            left: 33%;
+        }
+        
+        .madhyapradesh-txt {
+            top: 42%;
+            left: 48%;
+        }
+        
+        .maharastra-txt {
+            top: 47%;
+            left: 33%;
+        }
+        
+        .manipur-txt {
+            top: 30%;
+            left: 55%;
+        }
+        
+        .meghalaya-txt {
+            top: 33%;
+            left: 51%;
+        }
+        
+        .mizoram-txt {
+            top: 47%;
+            left: 51%;
+        }
+        
+        .nagaland-txt {
+            top: 27%;
+            left: 55%;
+        }
+        
+        .odisha-txt {
+            top: 47%;
+            left: 53%;
+        }
+        
+        .punjab-txt {
+            top: 17%;
+            left: 35%;
+        }
+        
+        .rajasthan-txt {
+            top: 27%;
+            left: 30%;
+        }
+        
+        .skkim-txt {
+            top: 17%;
+            left: 40%;
+        }
+        
+        .tamilnadu-txt {
+            top: 73%;
+            left: 48%;
+        }
+        
+        .tripura-txt {
+            top: 42%;
+            left: 48%;
+        }
+        
+        .uttarpradesh-txt {
+            top: 27%;
+            left: 50%;
+        }
+        
+        .uttarkhand-txt {
+            top: 27%;
+            left: 50%;
+        }
+        
+        .westbengal-txt {
+            top: 17%;
+            left: 60%;
+        }
+        
+        .popup-name {
+            text-align: center;
+            size: 20;
+        }
+        
+        .popup-img {
+            padding: 0%;
+            width: 70;
+            height: 180px;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            color: rgb(29, 6, 6);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            .h1 {
+                font-size: 50;
+            }
+        }
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+
+<body>
+    <center>
+        <h1 class="h1">FREEDOM AND STRUGGLE OF INDIA</h1>
+        <div class="hide uttarpradesh-txt popup">
+            <p class="popup-name"> Mangal Pandey</p>
+            <a href="/uttarpradesh.html"><img class="popup-img" alt="" src="https://rukminim3.flixcart.com/image/850/1000/xif0q/painting/r/7/z/13-50-1-bag-pf-0344-braj-art-gallery-original-imaggvjnfhkdhvt4.jpeg?q=20&crop=false"></a>
+        </div>
+        <div class="hide madhyapradesh-txt popup">
+            <p class="popup-name">Tatya Tope</p>
+            <a href="/madhyapradesh.html"><img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Tantiatope.jpg"></a>
+        </div>
+        <div class="hide punjab-txt popup">
+            <p class="popup-name">Bhagat Singh</p>
+            <a href="/punjab.html"><img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/5/54/Bhagat_Singh_1929.jpg"></a>
+        </div>
+        <div class="hide bihar-txt popup">
+            <p class="popup-name"> Kunwar Singh</p>
+            <a href="/bihar.html"><img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/8/85/Kunwarsingh.jpg"></a>
+        </div>
+        <div class="hide odisha-txt popup">
+            <p class="popup-name">Buxi Jagabandhu</p>
+            <a href="/odisha.html"><img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP6gMoB6s9_1zPI2JkqZlOKjkRf-9PtDaIpg&s"></a>
+        </div>
+        <div class="hide karnataka-txt popup">
+            <p class="popup-name"> Kittur Rani Chennamma</p>
+            <a href="/karnataka.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkpMho1MzeS_dKVUPfExyofJvL_DwrScB-DA&s"></a>
+        </div>
+        <div class="hide kerala-txt popup">
+            <p class="popup-name">Velu Thampi Dalawa</p>
+            <a href="/kerala.html">
+                <img class="popup-img" alt="" src="https://alchetron.com/cdn/velu-thampi-dalawa-091f2a3f-0979-4e06-a72a-3a29b85b12a-resize-750.jpeg"></a>
+        </div>
+        <div class="hide andhrapradesh-txt popup">
+            <p class="popup-name"> Alluri Sitarama Raju</p>
+            <a href="/andhrapradesh.html">
+                <img class="popup-img" alt="" src="https://pibindia.wordpress.com/wp-content/uploads/2016/08/alluri-sitarama-raju.jpg"></a>
+        </div>
+        <div class="hide arunachalpradesh-txt popup">
+            <p class="popup-name">Matmur Jamoh</p>
+            <a href="/arunachalpradesh.html">
+                <img class="popup-img" alt="" src="https://cmsadmin.amritmahotsav.nic.in/writereaddata/Portal/Images/Matmur-Jamoh.png"></a>
+        </div>
+        <div class="hide assam-txt popup">
+            <p class="popup-name">Kanaklata Barua</p>
+            <a href="/assam.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQepp1Z90BHeNTVfCSBA9_HlqZe1JODncUC-Q&s"></a>
+        </div>
+        <div class="hide chattigarh-txt popup">
+            <p class="popup-name"> Veer Narayan Singh</p>
+            <a href="/chattigarh.html">
+                <img class="popup-img" alt="" src="https://amritmahotsav.nic.in/writereaddata/Portal/Event/UnsungHeroesImage/298_1_1_veernarayan.jpg"></a>
+        </div>
+        <div class="hide goa-txt popup">
+            <p class="popup-name">T. B. Cunha</p>
+            <a href="/goa.html">
+                <img class="popup-img" alt="" src="https://miro.medium.com/v2/resize:fit:1200/1*BXS3caz3rI_HNqQmuKtpTw.jpeg"></a>
+        </div>
+        <div class="hide gujarat-txt popup">
+            <p class="popup-name">Sardar Vallabhbhai Patel</p>
+            <a href="/gujarat.html">
+                <img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Sardar_patel_%28cropped%29.jpg"></a>
+        </div>
+        <div class="hide haryana-txt popup">
+            <p class="popup-name"> Rao Tula Ram</p>
+            <a href="/haryana.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmN-Zb1xc-FuBv9mUw-tTub3oS3L9arFxkzA&s"></a>
+        </div>
+        <div class="hide himachalpradesh-txt popup">
+            <p class="popup-name"> Baba Kanshi Ram</p>
+            <a href="/himachalpradesh.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS812m5kT2Tt4rka0ojQti3GQjnkqroe4LiZQ&s"></a>
+        </div>
+        <div class="hide jammukashmir-txt popup">
+            <p class="popup-name">Maqbool Sherwani</p>
+            <a href="/jammukashmir.html">
+                <img class="popup-img" alt="" src="https://amritmahotsav.nic.in/writereaddata/Portal/Images/Maqbool-Sherwani-US-1.jpg"></a>
+        </div>
+        <div class="hide jharkhand-txt popup">
+            <p class="popup-name">Birsa Munda</p>
+            <a href="/jharkhand.html">
+                <img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/71/Birsa_Munda%2C_photograph_in_Roy_%281912-72%29.JPG"></a>
+        </div>
+        <div class="hide maharastra-txt popup">
+            <p class="popup-name">Bal Gangadhar Tilak</p>
+            <a href="/maharastra.html">
+                <img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Bal_Gangadhar_Tilak_%281856-1920%29.webp"></a>
+        </div>
+        <div class="hide manipur-txt popup">
+            <p class="popup-name">Rani Gaidinliu</p>
+            <a href="/manipur.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQFPxH8K7Lwisyc4_Ip5dbUkC73l8xlJ-_cw&s"></a>
+        </div>
+        <div class="hide meghalaya-txt popup">
+            <p class="popup-name"> U Tirot Sing</p>
+            <a href="/meghalaya.html">
+                <img class="popup-img" alt="" src="https://theshillongtimes.com/wp-content/uploads/2023/07/3F95492F-2041-4754-BE10-0540D0178437.jpeg"></a>
+        </div>
+        <div class="hide mizoram-txt popup">
+            <p class="popup-name">Ropuiliani</p>
+            <a href="/mizoram.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe-CIPYqIClYCTXpty7c6WeknNcshhCyYBmw&s"></a>
+        </div>
+        <div class="hide nagaland-txt popup">
+            <p class="popup-name">Gaidinliu Pamei</p>
+            <a href="/nagaland.html">
+                <img class="popup-img" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdgAsW3jFsOv0kw3fSnzXwQDyTDCUe51r5CA&s"></a>
+        </div>
+        <div class="hide rajasthan-txt popup">
+            <p class="popup-name"> Pratap Singh Barhat</p>
+            <a href="/rajasthan.html">
+                <img class="popup-img" alt="" src="https://amritmahotsav.nic.in/writereaddata/Portal/Images/Kunwar-Pratap-Singh_.jpg"></a>
+        </div>
+        <div class="hide sikkim-txt popup">
+            <p class="popup-name">Tashi Namgyal</p>
+            <a href="/sikkim.html">
+                <img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Tashi_Namgyal.jpg"></a>
+        </div>
+        <div class="hide tamilnadu-txt popup">
+            <p class="popup-name"> V.O. Chidambaram Pillai</p>
+            <a href="/tamilnadu.html">
+                <img class="popup-img" alt="" src="https://en-media.thebetterindia.com/uploads/2018/08/A-23.jpg"></a>
+        </div>
+        <div class="hide telangana-txt popup">
+            <p class="popup-name">Komaram Bheem</p>
+            <a href="/telangana.html">
+                <img class="popup-img" alt="" src="https://cmsadmin.amritmahotsav.nic.in/writereaddata/Portal/Event/UnsungHeroesImage/250_1_1_Komaram-Bheem.png"></a>
+        </div>
+        <div class="hide tripura-txt popup">
+            <p class="popup-name"> Bir Bikram</p>
+            <a href="/tripura.html">
+                <img class="popup-img" alt="" src="https://i0.wp.com/www.opindia.com/wp-content/uploads/2018/10/hqdefault-1.jpg?fit=480%2C360&ssl=1"></a>
+        </div>
+        <div class="hide uttarakhand-txt popup">
+            <p class="popup-name">Veer Chandra Singh Garhwali</p>
+            <a href="/uttarakhand.html">
+                <img class="popup-img" alt="" src="https://vcsgsrinagar.org/p-contents/uploads/gHCsiV253QpSOTzYv9a6rB8yw.jpg"></a>
+        </div>
+        <div class="hide westbengal-txt popup">
+            <p class="popup-name">Subhas Chandra Bose</p>
+            <a href="/westbengal.html">
+                <img class="popup-img" alt="" src="https://upload.wikimedia.org/wikipedia/commons/4/44/Subhas_Chandra_Bose_NRB.jpg"></a>
+        </div>
+
+        <map name="image-map">
+    <img src="map.avif" usemap="#image-map">
+    <map name="image-map">
+</map>
+        <area class="cl marker-punjab" target="" alt="punjab" title="" href="punjab.html" coords="372,267,408,310" shape="rect">
+        <area class="cl marker-madhyapradesh" target="" alt="madhyapradesh" title="madhyapradesh" href="madhyapradesh.html" coords="461,454,538,599" shape="rect">
+        <area class="cl marker-odisha" target="" alt="odisha" title="odisha" href="odisha.html" coords="651,601,683,690" shape="rect">
+        <area class="cl marker-bihar" target="" alt="bihar" title="bihar" href="bihar.html" coords="676,442,742,495" shape="rect ">
+        <area class="cl marker-uttarpradesh " target=" " alt="uttarpradesh " title="uttarpradesh " href="uttarpradesh.html " coords="449,351,612,496" shape="rect ">
+        <area class="cl marker-karnataka " target=" " alt="karnataka " title="karnataka " href="karnataka.html " coords="343,804,423,942" shape="rect">
+        <area class="cl marker-kerala " target=" " alt="kerala " title="kerala " href="kerala.html " coords="357,946,408,1060" shape="rect ">
+        <area class="cl marker-andhrapradesh " target=" " alt="andhrapradesh " title="andhrapradesh " href="andhrapradesh.html " coords="439,827,509,891" shape="rect ">
+        <area class="cl marker-arunachalpradesh " target=" " alt="arunachalpradesh " title="arunachalpradesh " href="arunachalpradesh.html " coords="905,399,1005,365" shape="rect ">
+        <area class="cl marker-assam " target=" " alt="assam " title="assam " href="assam.html " coords="913,413,939,472" shape="rect ">
+        <area class="cl marker-chattigarh " target=" " alt="chattigarh" title="chattigarh" href="chattigarh.html " coords="604,551,573,719" shape="rect ">
+        <area class="cl marker-goa " target=" " alt="goa " title="goa " href="goa.html " coords="316,830,321,831" shape="rect ">
+        <area class="cl marker-gujarat " target=" " alt="gujarat " title="gujarat " href="gujarat.html " coords="174,533,305,613" shape="rect ">
+        <area class="cl marker-haryana " target=" " alt="haryana " title="haryana " href="haryana.html " coords="390,334,418,377" shape="rect ">
+        <area class="cl marker-himachalpradesh " target=" " alt="himachalpradesh " title="himachalpradesh " href="himachalpradesh.html " coords="425,237,477,271" shape="rect ">
+        <area class="cl marker-jammukashmir " target=" " alt="jammukashmir " title="jammukashmir " href="jammukashmir.html " coords="336,105,492,233" shape="rect ">
+        <area class="cl marker-jharkhand " target=" " alt="jharkhand " title="jharkhand " href="jharkhand.html " coords="654,531,711,575" shape="rect ">
+        <area class="cl marker-maharastra " target=" " alt="maharastra " title="maharastra " href="maharastra.html " coords="332,628,356,764" shape="rect ">
+        <area class="cl marker-manipur " target=" " alt="manipur " title="manipur " href="manipur.html " coords="953,482,971,511" shape="rect ">
+        <area class="cl marker-meghalaya " target=" " alt="meghalaya " title="meghalaya " href="meghalaya.html " coords="853,467,915,474" shape="rect ">
+        <area class="cl marker- westbengal" target=" " alt="westbengal " title="westbengal " href="westbengal.html " coords="763,537,803,593" shape="rect ">
+        <area class="cl marker-mizoram " target=" " alt="mizoram " title="mizoram " href="mizoram.html " coords="928,520,940,575" shape="rect ">
+        <area class="cl marker-nagaland " target=" " alt="nagaland " title="nagaland " href="nagaland.html " coords="991,425,978,450" shape="rect ">
+        <area class="cl marker-rajasthan " target=" " alt="rajasthan " title="rajasthan " href="rajasthan.html " coords="331,341,347,437" shape="rect ">
+        <area class="cl marker-sikkim " target=" " alt="sikkim " title="sikkim " href="sikkim.html " coords="787,397,794,407" shape="rect ">
+        <area class="cl marker-tamilnadu " target=" " alt="tamilnadu " title="tamilnadu" href="tamilnadu.html " coords="510,921,432,1080" shape="rect ">
+        <area class="cl marker-telangana " target=" " alt="telangana " title="telangana " href="telangana.html " coords="477,691,547,756" shape="rect ">
+        <area class="cl marker-tripura " target=" " alt="tripura " title="tripura " href="tripura.html " coords="907,520,895,545" shape="rect ">
+        <area class="cl marker-uttarakhand " target=" " alt="uttarakhand " title="uttarakhand " href="uttarakhand.html " coords="492,303,516,352" shape="rect ">
+
+    </center>
+    </map>
+    <script>
+        $(document).ready(function() {
+            $(".hide ").hide();
+
+            $(".marker-punjab ").mousemove(function() {
+                $(".hide ").hide();
+                $(".punjab-txt ").toggle();
+            })
+
+            $(".marker-madhyapradesh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".madhyapradesh-txt ").toggle();
+            })
+
+            $(".marker-odisha ").mousemove(function() {
+                $(".hide ").hide();
+                $(".odisha-txt ").toggle();
+            })
+
+            $(".marker-bihar ").mousemove(function() {
+                $(".hide ").hide();
+                $(".bihar-txt ").toggle();
+            })
+            $(".marker-karnataka ").mousemove(function() {
+                $(".hide ").hide();
+                $(".karnataka-txt ").toggle();
+            })
+            $(".marker-kerala").mousemove(function() {
+                $(".hide ").hide();
+                $(".kerala-txt ").toggle();
+            })
+
+            $(".marker-uttarpradesh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".uttarpradesh-txt ").toggle();
+            })
+            $(".marker-andhrapradesh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".andhrapradesh-txt ").toggle();
+            })
+            $(".marker-tamilnadu ").mousemove(function() {
+                $(".hide ").hide();
+                $(".tamilnadu-txt ").toggle();
+            })
+            $(".marker-telangana ").mousemove(function() {
+                $(".hide ").hide();
+                $(".telangana-txt ").toggle();
+            })
+            $(".marker-maharastra ").mousemove(function() {
+                $(".hide ").hide();
+                $(".maharastra-txt ").toggle();
+            })
+            $(".marker-chattigarh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".chattigarh-txt ").toggle();
+            })
+            $(".marker-gujarat ").mousemove(function() {
+                $(".hide ").hide();
+                $(".gujarat-txt ").toggle();
+            })
+            $(".marker-goa ").mousemove(function() {
+                $(".hide ").hide();
+                $(".goa-txt ").toggle();
+            })
+            $(".marker-jharkhand ").mousemove(function() {
+                $(".hide ").hide();
+                $(".jharkhand-txt ").toggle();
+            })
+            $(".marker-westbengal ").mousemove(function() {
+                $(".hide ").hide();
+                $(".westbengal-txt ").toggle();
+            })
+            $(".marker-rajasthan ").mousemove(function() {
+                $(".hide ").hide();
+                $(".rajasthan-txt ").toggle();
+            })
+            $(".marker-haryana ").mousemove(function() {
+                $(".hide ").hide();
+                $(".haryana-txt ").toggle();
+            })
+            $(".marker-himachalpradesh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".himachalpradesh-txt ").toggle();
+            })
+            $(".marker-jammukashmir ").mousemove(function() {
+                $(".hide ").hide();
+                $(".jammukashmir-txt ").toggle();
+            })
+            $(".marker-uttarakhand ").mousemove(function() {
+                $(".hide ").hide();
+                $(".uttarakhand-txt ").toggle();
+            })
+            $(".marker-sikkim ").mousemove(function() {
+                $(".hide ").hide();
+                $(".sikkim-txt ").toggle();
+            })
+            $(".marker-meghalaya ").mousemove(function() {
+                $(".hide ").hide();
+                $(".meghalaya-txt ").toggle();
+            })
+            $(".marker-assam ").mousemove(function() {
+                $(".hide ").hide();
+                $(".assam-txt ").toggle();
+            })
+            $(".marker-nagaland ").mousemove(function() {
+                $(".hide ").hide();
+                $(".nagaland-txt ").toggle();
+            })
+            $(".marker-manipur ").mousemove(function() {
+                $(".hide ").hide();
+                $(".manipur-txt ").toggle();
+            })
+            $(".marker-mizoram ").mousemove(function() {
+                $(".hide ").hide();
+                $(".mizoram-txt ").toggle();
+            })
+            $(".marker-tripura ").mousemove(function() {
+                $(".hide ").hide();
+                $(".tripura-txt ").toggle();
+            })
+            $(".marker-arunachalpradesh ").mousemove(function() {
+                $(".hide ").hide();
+                $(".arunachalpradesh-txt ").toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>
